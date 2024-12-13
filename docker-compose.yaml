@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  kotlinapp:
+    container_name: kotlinapp
+    image: yoostudy/kotlinapp:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DB_URL: ${DB_URL}
+        PG_USER: ${PG_USER}
+        PG_PASSWORD: ${PG_PASSWORD}
